@@ -14,7 +14,6 @@
 			<div class="col-md-4">
 				<h3 align="center">Update book:</h3>
 				<form method="get" action="/updateBook">
-
 					<div class="form-group row">
 						<label for="title-input" class="col-xs-2 col-form-label">title</label>
 						<div class="col-xs-10">
@@ -31,7 +30,6 @@
 								value="${book.author}">
 						</div>
 					</div>
-
 					<div class="form-group row">
 						<label for="amoun-input" class="col-xs-2 col-form-label">amount</label>
 						<div class="col-xs-10">
@@ -48,7 +46,6 @@
 								value="${book.isbn}">
 						</div>
 					</div>
-
 					<div class="form-group row">
 						<label for="description-input" class="col-xs-2 col-form-label">description</label>
 						<div class="col-xs-10">
