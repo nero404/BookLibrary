@@ -43,7 +43,7 @@
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<div class="btn-toolbar" role="toolbar"
-							aria-label="Toolbar with button groups" >
+							aria-label="Toolbar with button groups">
 							<c:if test="${user.userType.userType=='admin'}">
 								<form method="post" action="/deleteBook" name="deleteBook">
 									<input type="hidden" name="bookId" value="${book.id}">
@@ -58,7 +58,8 @@
 							</c:if>
 							<form method="get" action="/addBookToCart" name="addBookToCart">
 								<input type="hidden" name="bookId" value="${book.id}"> <input
-									type="submit" class="btn btn-m btn-primary" value="order" style="margin-right: 10px">
+									type="submit" class="btn btn-m btn-primary" value="order"
+									style="margin-right: 10px">
 							</form>
 						</div>
 					</div>

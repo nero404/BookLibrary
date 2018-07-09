@@ -29,8 +29,6 @@
 	integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
 	crossorigin="anonymous"></script>
 
-
-
 <div class="wrapper container-fluid" style="margin-top: 5px">
 	<div class="row" align="center" style="margin-bottom: 20px;">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">

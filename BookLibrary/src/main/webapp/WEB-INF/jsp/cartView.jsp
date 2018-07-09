@@ -10,8 +10,8 @@
 <body>
 	<div class="wrapper container-fluid">
 		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
+			<div class="col-xs-4"></div>
+			<div class="col-xs-4">
 				<h2>Cart:</h2>
 				<c:choose>
 					<c:when test="${cart != null && cart.numberOfBooks > 0}">
@@ -48,7 +48,7 @@
    			 	</c:otherwise>
 				</c:choose>
 			</div>
-			<div class="col-md-4"></div>
+			<div class="col-xs-4"></div>
 		</div>
 	</div>
 </body>

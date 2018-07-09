@@ -10,8 +10,8 @@
 </head>
 <body>
 	<div class="row">
-		<div class="col-md-4"></div>
-		<div class="col-md-4">
+		<div class="col-xs-4"></div>
+		<div class="col-xs-4">
 			<div class="card-columns">
 				<c:forEach var="category" items="${categories}">
 					<div class="card">
@@ -25,7 +25,7 @@
 				</c:forEach>
 			</div>
 		</div>
-		<div class="col-md-4"></div>
+		<div class="col-xs-4"></div>
 	</div>
 </body>
 </html>

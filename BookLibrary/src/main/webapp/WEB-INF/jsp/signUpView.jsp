@@ -10,8 +10,8 @@
 <body>
 	<div class="wrapper container-fluid">
 		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
+			<div class="col-xs-4"></div>
+			<div class="col-xs-4">
 				<h1 align="center">Registration:</h1>
 				<form method="post" name="registration" action="/signUp/validate">
 					<div class="form-group">
@@ -44,7 +44,7 @@
 					</div>
 				</form>
 			</div>
-			<div class="col-md-4"></div>
+			<div class="col-xs-4"></div>
 		</div>
 	</div>
 </body>

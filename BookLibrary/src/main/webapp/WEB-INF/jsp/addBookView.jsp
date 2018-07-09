@@ -10,8 +10,8 @@
 <body>
 	<div class="wrapper container-fluid">
 		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
+			<div class="col-xs-4"></div>
+			<div class="col-xs-4">
 				<h3 align="center">Add book:</h3>
 				<form method="get" action="addBookCrud">
 					<div class="form-group row">
@@ -66,7 +66,7 @@
 						class="btn btn-outline-primary btn-lg btn-block">add</button>
 				</form>
 			</div>
-			<div class="col-md-4"></div>
+			<div class="col-xs-4"></div>
 		</div>
 	</div>
 </body>

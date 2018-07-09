@@ -10,8 +10,8 @@
 <body>
 	<div class="wrapper container-fluid">
 		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
+			<div class="col-xs-4"></div>
+			<div class="col-xs-4">
 				<h3 align="center">Update book:</h3>
 				<form method="get" action="/updateBook">
 					<div class="form-group row">
@@ -71,7 +71,7 @@
 						class="btn btn-outline-primary btn-lg btn-block">update</button>
 				</form>
 			</div>
-			<div class="col-md-4"></div>
+			<div class="col-xs-4"></div>
 		</div>
 	</div>
 </body>

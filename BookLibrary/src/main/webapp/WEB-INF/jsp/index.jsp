@@ -34,35 +34,33 @@
 					<div class="col-xs-6">
 						<h3>Top 15 recomended Books:</h3>
 						<div class="row">
-							<div class="col-md-12">
-								<table class="table table-hover">
+							<table class="table table-hover">
+								<tr>
+									<th></th>
+									<th>title</th>
+									<th>author</th>
+									<th>category</th>
+									<th>rate</th>
+									<th>available</th>
+								</tr>
+								<c:forEach items="${top15List}" var="book">
 									<tr>
-										<th></th>
-										<th>title</th>
-										<th>author</th>
-										<th>category</th>
-										<th>rate</th>
-										<th>available</th>
+										<td><div class="row">
+												<img alt="" style="width: 90px; height: 90px;"
+													src="https://a.optnmnstr.com/users/3cbeee57fc1c/images/30f9b75891501472785456-Book-Transparent-Background.png">
+											</div></td>
+										<td><a href="/bookView/${book.id}"><c:out
+													value="${book.title}" /> </a></td>
+										<td><c:out value="${book.author}" /></td>
+										<td><c:out value="${book.category.name}" /></td>
+										<td><c:out value="${book.rate}" /></td>
+										<td><c:out value="${book.amount} " /></td>
+										<td><a href="bookView/${book.id}"><input
+												type="submit" class="btn btn-m btn-primary" value="more">
+										</a></td>
 									</tr>
-									<c:forEach items="${top15List}" var="book">
-										<tr>
-											<td><div class="row">
-													<img alt="" style="width: 90px; height: 90px;"
-														src="https://a.optnmnstr.com/users/3cbeee57fc1c/images/30f9b75891501472785456-Book-Transparent-Background.png">
-												</div></td>
-											<td><a href="/bookView/${book.id}"><c:out
-														value="${book.title}" /> </a></td>
-											<td><c:out value="${book.author}" /></td>
-											<td><c:out value="${book.category.name}" /></td>
-											<td><c:out value="${book.rate}" /></td>
-											<td><c:out value="${book.amount} " /></td>
-											<td><a href="bookView/${book.id}"><input
-													type="submit" class="btn btn-m btn-primary" value="more">
-											</a></td>
-										</tr>
-									</c:forEach>
-								</table>
-							</div>
+								</c:forEach>
+							</table>
 						</div>
 					</div>
 					<div class="col-xs-3"></div>
