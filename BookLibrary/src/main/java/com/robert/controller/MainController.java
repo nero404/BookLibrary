@@ -24,9 +24,7 @@ public class MainController {
 	public ModelAndView index(ModelMap model) {
 
 		List<Book> top15 = bookService.findTop15();
-
 		model.addAttribute("top15List", top15);
-
 		return new ModelAndView("/index", model);
 	}
 

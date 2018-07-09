@@ -13,12 +13,10 @@ public class Category implements Serializable {
 
 	@Id
 	private int id;
-
 	private String name;
-	
 	private String description;
 
-	//bi-directional many-to-one association to Book
+
 	@OneToMany(mappedBy="category")
 	private List<Book> books;
 

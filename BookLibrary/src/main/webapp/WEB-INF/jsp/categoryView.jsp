@@ -23,7 +23,6 @@
 								<th>category</th>
 								<th>rate</th>
 								<th>available</th>
-
 							</tr>
 							<c:forEach items="${categoryBooks}" var="book">
 								<tr>
@@ -37,8 +36,9 @@
 									<td><c:out value="${book.category.name}" /></td>
 									<td><c:out value="${book.rate}" /></td>
 									<td><c:out value="${book.amount} " /></td>
-									<td><a href="/bookView/${book.id}"><input type="submit"
-											class="btn btn-m btn-primary" value="more"> </a></td>
+									<td><a href="/bookView/${book.id}"><input
+											type="submit" class="btn btn-m btn-primary" value="more">
+									</a></td>
 							</c:forEach>
 						</table>
 					</div>

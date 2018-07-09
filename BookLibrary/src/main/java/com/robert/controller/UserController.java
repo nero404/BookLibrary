@@ -19,7 +19,6 @@ public class UserController {
 
 	@Autowired
 	UserService userService;
-
 	@Autowired
 	private UserTypeDao userTypeService;
 
@@ -35,7 +34,6 @@ public class UserController {
 
 	@RequestMapping("/signIn/validate")
 	public ModelAndView validateSignIn(@RequestParam String login, @RequestParam String password, ModelMap model) {
-
 		User user = userService.signIn(login, password);
 		if (user != null)
 			return new ModelAndView("redirect:/index");
@@ -51,12 +49,8 @@ public class UserController {
 
 	@RequestMapping("/signUp/validate")
 	public ModelAndView validateSignIn(@RequestParam String login, @RequestParam String name,
-			@RequestParam String password, @RequestParam String sure_name, @RequestParam String phone, ModelMap model)
-
-	{
-
+			@RequestParam String password, @RequestParam String sure_name, @RequestParam String phone, ModelMap model) {
 		if (userService.validateLogin(login) == true) {
-
 			User user = new User();
 			user.setLogin(login);
 			user.setName(name);
@@ -64,14 +58,11 @@ public class UserController {
 			user.setSureName(sure_name);
 			user.setTelephone(phone);
 			user.setUserType(userTypeService.getOne(2));
-
 			user = userService.insertUser(user);
 			if (user == null) {
 				return new ModelAndView("/signUp");
 			}
-
 			return new ModelAndView("/index");
-
 		} else {
 			return new ModelAndView("/signUp");
 		}
@@ -79,13 +70,11 @@ public class UserController {
 
 	@RequestMapping(value = "/userInfoView", method = RequestMethod.GET)
 	public String infoView() {
-
 		return "/userInfoView";
 	}
 
 	@RequestMapping(value = "/ownOrdersView", method = RequestMethod.GET)
 	public String ownOrders() {
-
 		return "ownOrdersView";
 	}
 

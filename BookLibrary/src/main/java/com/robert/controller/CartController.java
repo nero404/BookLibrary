@@ -33,7 +33,6 @@ public class CartController {
 		Book book = bookService.findOne(bookId);
 		Cart cart = cartService.getCart();
 		cart.removeBook(book);
-
 		return new ModelAndView("/cartView", model);
 	}
 

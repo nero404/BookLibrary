@@ -12,22 +12,18 @@
 		<div class="row">
 			<div class="col-md-3"></div>
 			<div class="col-md-6">
-
 				<h3>Your history order:</h3>
 				<br />
-
 				<table class="table table-hover">
 					<tr>
 						<th><b>date</b></th>
 						<th>title</th>
 						<th>author</th>
-
 					</tr>
 					<c:forEach items="${user.userBorrows}" var="userOrder">
 						<tr>
 							<td><c:out value="${userOrder.date}" /></td>
 						</tr>
-
 						<c:forEach var="book" items="${userOrder.books}">
 							<tr>
 								<td></td>
@@ -35,12 +31,8 @@
 								<td><c:out value="${book.title}" /></td>
 							</tr>
 						</c:forEach>
-
-
-
 					</c:forEach>
 				</table>
-
 			</div>
 			<div class="col-md-3"></div>
 		</div>

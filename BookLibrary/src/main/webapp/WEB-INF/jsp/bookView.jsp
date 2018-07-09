@@ -33,14 +33,11 @@
 									<option value="8">8</option>
 									<option value="9">9</option>
 									<option value="10">10</option>
-
 								</select> <input type="hidden" id="bookId" name="bookId"
 									value="${book.id}"> <input type="submit" value="rate">
 							</form>
 						</c:if>
-
 						<p>available: ${book.amount}</p>
-
 						<p>description: ${book.description}</p>
 					</div>
 				</div>
@@ -49,7 +46,6 @@
 						<div class="btn-toolbar" role="toolbar"
 							aria-label="Toolbar with button groups" >
 							<c:if test="${user.userType.userType=='admin'}">
-
 								<form method="post" action="/deleteBook" name="deleteBook">
 									<input type="hidden" name="bookId" value="${book.id}">
 									<input type="submit" class="btn btn-m btn-warning"
@@ -57,7 +53,6 @@
 								</form>
 								<form method="post" action="/updateBookView/${bookId}"
 									name="updateBookView">
-
 									<input type="submit" class="btn btn-m btn-warning"
 										value="update" style="margin-right: 10px">
 								</form>
@@ -69,7 +64,6 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>

@@ -22,19 +22,15 @@ public class UserBorrowService {
 
 	@Autowired
 	BorrowDao borrowDao;
-
 	@Autowired
 	BookDao bookDao;
-
 	@Autowired
 	UserDao userDao;
-
 	@Autowired
 	CartService cartService;
 
 	@Transactional
 	public void borrowBooks(User user) {
-
 		Cart cart = cartService.getCart();
 		int numberOfBooks = cart.getNumberOfBooks();
 		List<Book> books = cart.getBooks();
@@ -43,19 +39,14 @@ public class UserBorrowService {
 		borrow.setUser(user);
 		borrow.setDate(new Date());
 		borrow.setBooks(books);
-
 		user.getUserBorrows().add(borrow);
-
 		for (Book book : books) {
-
 			book.getUserBorrows().add(borrow);
 			book.decrementAmount();
-
 		}
 		borrowDao.save(borrow);
 		borrowDao.flush();
 		userDao.flush();
-
 		cartService.createNewCart();
 	}
 }

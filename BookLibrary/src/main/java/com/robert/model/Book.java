@@ -15,9 +15,7 @@ public class Book implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-
 	private int amount;
-
 	private String author;
 
 	@Column(name = "data_added")
@@ -25,11 +23,8 @@ public class Book implements Serializable {
 	private Date dataAdded;
 
 	private String isbn;
-
 	private String title;
-
 	private int rate;
-
 	private String description;
 
 	@ManyToOne
@@ -52,17 +47,14 @@ public class Book implements Serializable {
 	public Book() {
 	}
 
-	/*public void removeBookRate(User user) {
-		for (Iterator<BookRate> iterator = usersRates.iterator(); iterator.hasNext();) {
-			BookRate bookRate = iterator.next();
-			if (bookRate.getBook().equals(this) && bookRate.getUser().equals(user)) {
-				iterator.remove();
-				bookRate.getUser().getBooksRates().remove(bookRate);
-				bookRate.setBook(null);
-				bookRate.setUser(null);
-			}
-		}
-	}*/
+	/*
+	 * public void removeBookRate(User user) { for (Iterator<BookRate> iterator =
+	 * usersRates.iterator(); iterator.hasNext();) { BookRate bookRate =
+	 * iterator.next(); if (bookRate.getBook().equals(this) &&
+	 * bookRate.getUser().equals(user)) { iterator.remove();
+	 * bookRate.getUser().getBooksRates().remove(bookRate); bookRate.setBook(null);
+	 * bookRate.setUser(null); } } }
+	 */
 
 	public int getId() {
 		return this.id;

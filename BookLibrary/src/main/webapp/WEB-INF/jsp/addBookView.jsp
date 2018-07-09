@@ -12,11 +12,8 @@
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
-
 				<h3 align="center">Add book:</h3>
-
 				<form method="get" action="addBookCrud">
-
 					<div class="form-group row">
 						<label for="title-input" class="col-xs-2 col-form-label">title</label>
 						<div class="col-xs-10">
@@ -24,7 +21,6 @@
 								placeholder="title" id="title-input" name="title">
 						</div>
 					</div>
-
 					<div class="form-group row">
 						<label for="author-input" class="col-xs-2 col-form-label">author</label>
 						<div class="col-xs-10">
@@ -32,7 +28,6 @@
 								placeholder="author" id="title-input" name="author">
 						</div>
 					</div>
-
 					<div class="form-group row">
 						<label for="amoun-input" class="col-xs-2 col-form-label">amount</label>
 						<div class="col-xs-10">
@@ -40,7 +35,6 @@
 								placeholder="amount" id="amoun-input" name="amount">
 						</div>
 					</div>
-
 					<div class="form-group row">
 						<label for="isbn-input" class="col-xs-2 col-form-label">isbn</label>
 						<div class="col-xs-10">
@@ -48,7 +42,6 @@
 								placeholder="isbn" id="isbn-input" name="isbn">
 						</div>
 					</div>
-
 					<div class="form-group row">
 						<label for="description-input" class="col-xs-2 col-form-label">description</label>
 						<div class="col-xs-10">
@@ -57,7 +50,6 @@
 								name="description">
 						</div>
 					</div>
-
 					<div class="form-group">
 						<label for="sel1">book category:</label> <select
 							class="form-control" id="sel1" name="categoryid">
@@ -73,7 +65,6 @@
 					<button type="submit"
 						class="btn btn-outline-primary btn-lg btn-block">add</button>
 				</form>
-
 			</div>
 			<div class="col-md-4"></div>
 		</div>

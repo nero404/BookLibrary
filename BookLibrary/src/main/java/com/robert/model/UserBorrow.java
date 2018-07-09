@@ -25,7 +25,6 @@ public class UserBorrow implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
-	
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(
 		name="borrowed_book"
@@ -38,7 +37,6 @@ public class UserBorrow implements Serializable {
 		)
 	private List<Book> books;
 
-	
 	@ManyToOne
 	private User user;
 
@@ -65,8 +63,6 @@ public class UserBorrow implements Serializable {
 		return this.date;
 	}
 
-
-	
 	public void setDate(Date date) {
 		this.date = date;
 	}

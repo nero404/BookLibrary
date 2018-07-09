@@ -2,8 +2,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<html>
-<head>
+
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,9 +33,6 @@
 
 <div class="wrapper container-fluid" style="margin-top: 5px">
 	<div class="row" align="center" style="margin-bottom: 20px;">
-
-
-
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<a href="/index"><button type="submit"
 					class="btn  btn-info btn-lg" value="">
@@ -96,11 +92,6 @@
 					<span class="glyphicon glyphicon glyphicon-envelope"
 						aria-hidden="true"></span> Contact
 				</button></a>
-
 		</nav>
-
 	</div>
-
 </div>
-
-</head>

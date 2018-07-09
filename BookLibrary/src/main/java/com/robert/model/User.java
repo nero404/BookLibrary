@@ -15,16 +15,12 @@ public class User implements Serializable {
 
 	@Id
 	private int id;
-
 	private String login;
-
 	private String name;
-
 	private String password;
 
 	@Column(name = "sure_name")
 	private String sureName;
-
 	private String telephone;
 
 	@ManyToOne

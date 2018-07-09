@@ -12,9 +12,7 @@
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
-
 				<h3 align="center">Update book:</h3>
-
 				<form method="get" action="/updateBook">
 
 					<div class="form-group row">
@@ -25,7 +23,6 @@
 								value="${book.title}">
 						</div>
 					</div>
-
 					<div class="form-group row">
 						<label for="author-input" class="col-xs-2 col-form-label">author</label>
 						<div class="col-xs-10">
@@ -43,7 +40,6 @@
 								value="${book.amount}">
 						</div>
 					</div>
-
 					<div class="form-group row">
 						<label for="isbn-input" class="col-xs-2 col-form-label">isbn</label>
 						<div class="col-xs-10">
@@ -61,7 +57,6 @@
 								name="description" value="${book.description}">
 						</div>
 					</div>
-
 					<div class="form-group">
 						<label for="sel1">book category:</label> <select
 							class="form-control" id="sel1" name="categoryId">
@@ -72,14 +67,12 @@
 							<option value="6">Mainstream Novels</option>
 							<option value="7">Romantic Fiction</option>
 							<option value="8">Narrative Nonfiction</option>
-
 						</select>
 					</div>
 					<input type="hidden" name="bookId" value="${book.id}">
 					<button type="submit"
 						class="btn btn-outline-primary btn-lg btn-block">update</button>
 				</form>
-
 			</div>
 			<div class="col-md-4"></div>
 		</div>

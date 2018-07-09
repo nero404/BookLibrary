@@ -2,16 +2,13 @@ package com.robert.model;
 
 import javax.persistence.*;
 
-
 @Entity(name = "BookRate")
 @Table(name = "book_rate")
 public class BookRate {
 
 	@EmbeddedId
 	private BookRateId id;
-
 	public BookRate() {
-
 	}
 
 	public BookRate(Book book, User user, int rate) {

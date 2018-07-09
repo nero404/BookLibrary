@@ -26,7 +26,6 @@
 					<button type="submit"
 						class="btn btn-outline-primary btn-lg btn-block">Sign in</button>
 				</form>
-
 			</div>
 		</div>
 		<div class="col-md-4"></div>

@@ -23,21 +23,16 @@ public class CategoryController {
 
 	@RequestMapping(value = "/categoryView/{categoryId}", method = RequestMethod.GET)
 	public ModelAndView test(@PathVariable int categoryId, ModelMap model) {
-
 		Category selectedCategory = categoryService.findById(categoryId);
 		model.addAttribute("selectedCategory", selectedCategory);
-
 		List<Book> categoryBooks = selectedCategory.getBooks();
-
 		model.addAttribute("categoryBooks", categoryBooks);
-
 		return new ModelAndView("/categoryView", model);
 	}
 
 	@RequestMapping("/categoriesView")
 	public ModelAndView categoriesView(ModelMap model) {
 		model.addAttribute("categories", categoryService.findAll());
-
 		return new ModelAndView("/categoriesView", model);
 	}
 

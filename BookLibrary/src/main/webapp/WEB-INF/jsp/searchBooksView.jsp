@@ -30,7 +30,6 @@
 							<th>category</th>
 							<th>rate</th>
 							<th>available</th>
-
 						</tr>
 						<c:forEach items="${selectedBook}" var="book">
 							<tr>
@@ -38,7 +37,6 @@
 										<img alt="" style="width: 90px; height: 90px;"
 											src="https://a.optnmnstr.com/users/3cbeee57fc1c/images/30f9b75891501472785456-Book-Transparent-Background.png">
 									</div></td>
-
 								<td><a href="/bookView/${book.id}"><c:out
 											value="${book.title}" /> </a></td>
 								<td><c:out value="${book.author}" /></td>

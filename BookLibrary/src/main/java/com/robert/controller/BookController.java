@@ -37,9 +37,7 @@ public class BookController {
 		User user = (User) userService.getUser();
 		bookService.addBookRate(book, user, rate);
 		bookService.avgRateBook(bookId);
-
 		return new ModelAndView("redirect:/bookView/" + bookId, model);
-
 	}
 
 	@RequestMapping(value = "searchBooksView", method = RequestMethod.GET)
@@ -58,16 +56,12 @@ public class BookController {
 		Book book = (Book) bookService.findById(bookId);
 		boolean userRate = bookService.checkIfBookHasUserRate(bookId);
 		model.addAttribute("userRate", userRate);
-
 		model.addAttribute("book", book);
-
 		return new ModelAndView("/bookView", model);
-
 	}
 
 	@RequestMapping(value = "/findBook", method = RequestMethod.GET)
 	public ModelAndView findBook(@RequestParam String title, @RequestParam String parametr, ModelMap model) {
-
 		if (parametr.equals("title")) {
 			List<Book> books = (List<Book>) bookService.findByTitleContaining(title);
 			model.addAttribute("selectedBook", books);
@@ -76,7 +70,6 @@ public class BookController {
 			List<Book> books = (List<Book>) bookService.findByAuthorContaining(title);
 			model.addAttribute("selectedBook", books);
 			return new ModelAndView("/searchBooksView", model);
-
 		} else
 			return new ModelAndView("/", model);
 	}
@@ -91,9 +84,8 @@ public class BookController {
 	@RequestMapping(value = "/addBookCrud", method = RequestMethod.GET)
 	public ModelAndView addBook(@RequestParam String title, @RequestParam String author, @RequestParam String isbn,
 			@RequestParam Integer amount, @RequestParam Integer categoryid, @RequestParam String description) {
-
+		
 		bookService.addBook(title, author, isbn, amount, categoryid, description);
-
 		return new ModelAndView("redirect:/index");
 	}
 
@@ -101,15 +93,8 @@ public class BookController {
 	public ModelAndView updateBook(@RequestParam Integer bookId, @RequestParam String title,
 			@RequestParam String author, @RequestParam String isbn, @RequestParam int amount,
 			@RequestParam Integer categoryId, @RequestParam String description, Model model) {
-		Book bookToUpdate = bookService.findById(bookId);
-		bookToUpdate.setTitle(title);
-		bookToUpdate.setAuthor(author);
-		bookToUpdate.setIsbn(isbn);
-		bookToUpdate.setAmount(amount);
-		bookToUpdate.setCategory(categoryService.findById(categoryId));
-		bookToUpdate.setDescription(description);
-		bookService.updateBook(bookToUpdate);
-
+		
+		bookService.updateBook(bookId, title, author, isbn, amount, categoryId, description);
 		return new ModelAndView("redirect:/index");
 
 	}
@@ -118,13 +103,11 @@ public class BookController {
 	public String borrowBooksView() {
 		User user = (User) userService.getUser();
 		userBorrowService.borrowBooks(user);
-
 		return "/confirmView";
 	}
 
 	@RequestMapping(value = "/addBookView", method = RequestMethod.GET)
 	public String addBookView() {
-
 		return "/addBookView";
 	}
 

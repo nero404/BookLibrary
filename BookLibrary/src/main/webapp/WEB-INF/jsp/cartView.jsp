@@ -13,7 +13,6 @@
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
 				<h2>Cart:</h2>
-
 				<c:choose>
 					<c:when test="${cart != null && cart.numberOfBooks > 0}">
         			books in cart:
@@ -39,9 +38,8 @@
 								</tr>
 							</c:forEach>
 						</table>
-
 						<form action="/borrowBooks" method="get">
-							<button type="submit" class="btn btn-m btn-danger" >
+							<button type="submit" class="btn btn-m btn-danger">
 								borrow</button>
 						</form>
 					</c:when>
