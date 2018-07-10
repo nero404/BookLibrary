@@ -18,9 +18,7 @@ public class User implements Serializable {
 	private String login;
 	private String name;
 	private String password;
-
-	@Column(name = "sure_name")
-	private String sureName;
+	private String surname;
 	private String telephone;
 
 	@ManyToOne
@@ -77,12 +75,14 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-	public String getSureName() {
-		return this.sureName;
+
+
+	public String getSurname() {
+		return surname;
 	}
 
-	public void setSureName(String sureName) {
-		this.sureName = sureName;
+	public void setSurname(String surname) {
+		this.surname = surname;
 	}
 
 	public String getTelephone() {

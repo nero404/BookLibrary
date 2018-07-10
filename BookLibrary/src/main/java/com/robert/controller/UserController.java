@@ -19,8 +19,6 @@ public class UserController {
 
 	@Autowired
 	UserService userService;
-	@Autowired
-	private UserTypeDao userTypeService;
 
 	@RequestMapping("/signIn")
 	public String signIn() {
@@ -44,28 +42,19 @@ public class UserController {
 	@RequestMapping("/signOut")
 	public String signOut() {
 		userService.signOut();
-		return "/index";
+		return "redirect:/index";
 	}
 
 	@RequestMapping("/signUp/validate")
 	public ModelAndView validateSignIn(@RequestParam String login, @RequestParam String name,
-			@RequestParam String password, @RequestParam String sure_name, @RequestParam String phone, ModelMap model) {
+			@RequestParam String password, @RequestParam String surname, @RequestParam String phone, ModelMap model) {
 		if (userService.validateLogin(login) == true) {
-			User user = new User();
-			user.setLogin(login);
-			user.setName(name);
-			user.setPassword(password);
-			user.setSureName(sure_name);
-			user.setTelephone(phone);
-			user.setUserType(userTypeService.getOne(2));
-			user = userService.insertUser(user);
-			if (user == null) {
+			User user = userService.signUpUser(login, name, password, surname, phone);
+			if (user == null)
 				return new ModelAndView("/signUp");
-			}
-			return new ModelAndView("/index");
-		} else {
-			return new ModelAndView("/signUp");
 		}
+		return new ModelAndView("redirect:/index");
+
 	}
 
 	@RequestMapping(value = "/userInfoView", method = RequestMethod.GET)

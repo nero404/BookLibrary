@@ -23,8 +23,8 @@
 							type="password" name="password" placeholder="password" required>
 					</div>
 					<div class="form-group">
-						<label><b>surename</b></label> <input class="form-control"
-							type="text" name="sure_name" placeholder="suerename" required>
+						<label><b>surname</b></label> <input class="form-control"
+							type="text" name="surname" placeholder="surname" required>
 					</div>
 					<div class="form-group">
 						<label><b>name</b></label> <input class="form-control" type="text"

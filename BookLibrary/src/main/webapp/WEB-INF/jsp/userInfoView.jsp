@@ -17,12 +17,12 @@
 				<table class="table table-hover">
 					<tr>
 						<th>name</th>
-						<th>surename</th>
+						<th>surname</th>
 						<th>telephone</th>
 					</tr>
 					<tr>
 						<td><c:out value="${user.name}" /></td>
-						<td><c:out value="${user.sureName}" /></td>
+						<td><c:out value="${user.surname}" /></td>
 						<td><c:out value="${user.telephone}" /></td>
 					</tr>
 				</table>

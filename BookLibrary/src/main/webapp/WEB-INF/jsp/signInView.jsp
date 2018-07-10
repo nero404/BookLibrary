@@ -19,7 +19,7 @@
 							placeholder="login" name="login" required class="form-control">
 					</div>
 					<div class="form-group">
-						<label><b>passowrd </b></label> <input type="password"
+						<label><b>password </b></label> <input type="password"
 							placeholder="password" name="password" required
 							class="form-control">
 					</div>

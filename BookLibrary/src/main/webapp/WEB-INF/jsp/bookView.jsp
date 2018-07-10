@@ -7,64 +7,91 @@
 <head>
 <%@include file="header.jsp"%>
 </head>
-<div class="wrapper container-fluid">
-	<div class="row">
-		<div class="col-xs-3"></div>
-		<div class="col-xs-6">
+<body>
+	<c:choose>
+		<c:when test="${user==null}">
 			<div class="row">
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<p>title: ${book.title}</p>
-						<p>author: ${book.author}</p>
-						<p>category: ${book.category.name}</p>
-						<p>isbn: ${book.isbn}</p>
-						<p>users rate: ${book.rate}</p>
-						<c:if test="${userRate == false}">
-							<form method="get" action="/rateBook">
-								<select class="form-control" id="sel1" name="rate">
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5</option>
-									<option value="6">6</option>
-									<option value="7">7</option>
-									<option value="8">8</option>
-									<option value="9">9</option>
-									<option value="10">10</option>
-								</select> <input type="hidden" id="bookId" name="bookId"
-									value="${book.id}"> <input type="submit" value="rate">
-							</form>
-						</c:if>
-						<p>available: ${book.amount}</p>
-						<p>description: ${book.description}</p>
+				<div class="col-xs-3"></div>
+				<div class="col-xs-6">
+					<div class="jumbotron"
+						style="padding-left: 30px; padding-right: 30px">
+						<h1 class="lead">Welcome!</h1>
+						<p class="tagline">We invite you to take advantage of our
+							library.</p>
+						<p style="text-align: center">
+							<a class="btn btn-lg btn-success" href="/signIn" role="button"
+								style="text-align: center">Sign in</a>
+						</p>
 					</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="btn-toolbar" role="toolbar"
-							aria-label="Toolbar with button groups">
-							<c:if test="${user.userType.userType=='admin'}">
-								<form method="post" action="/deleteBook" name="deleteBook">
-									<input type="hidden" name="bookId" value="${book.id}">
-									<input type="submit" class="btn btn-m btn-warning"
-										value="delete" style="margin-right: 10px">
-								</form>
-								<form method="post" action="/updateBookView/${bookId}"
-									name="updateBookView">
-									<input type="submit" class="btn btn-m btn-warning"
-										value="update" style="margin-right: 10px">
-								</form>
-							</c:if>
-							<form method="get" action="/addBookToCart" name="addBookToCart">
-								<input type="hidden" name="bookId" value="${book.id}"> <input
-									type="submit" class="btn btn-m btn-primary" value="order"
-									style="margin-right: 10px">
-							</form>
+				<div class="col-xs-3"></div>
+			</div>
+		</c:when>
+		<c:otherwise>
+			<div class="wrapper container-fluid">
+				<div class="row">
+					<div class="col-xs-3"></div>
+					<div class="col-xs-6">
+						<div class="row">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<p>title: ${book.title}</p>
+									<p>author: ${book.author}</p>
+									<p>category: ${book.category.name}</p>
+									<p>isbn: ${book.isbn}</p>
+									<p>users rate: ${book.rate}</p>
+									<c:if test="${userRate == false}">
+										<form method="get" action="/rateBook">
+											<select class="form-control" id="sel1" name="rate">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+											</select> <input type="hidden" id="bookId" name="bookId"
+												value="${book.id}"> <input type="submit"
+												value="rate">
+										</form>
+									</c:if>
+									<p>available: ${book.amount}</p>
+									<p>description: ${book.description}</p>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="btn-toolbar" role="toolbar"
+										aria-label="Toolbar with button groups">
+										<c:if test="${user.userType.userType=='admin'}">
+											<form method="post" action="/deleteBook" name="deleteBook">
+												<input type="hidden" name="bookId" value="${book.id}">
+												<input type="submit" class="btn btn-m btn-warning"
+													value="delete" style="margin-right: 10px">
+											</form>
+											<form method="post" action="/updateBookView/${bookId}"
+												name="updateBookView">
+												<input type="submit" class="btn btn-m btn-warning"
+													value="update" style="margin-right: 10px">
+											</form>
+										</c:if>
+										<form method="get" action="/addBookToCart"
+											name="addBookToCart">
+											<input type="hidden" name="bookId" value="${book.id}">
+											<input type="submit" class="btn btn-m btn-primary"
+												value="order" style="margin-right: 10px">
+										</form>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</div>
+		</c:otherwise>
+	</c:choose>
+</body>
+</html>
